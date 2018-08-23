@@ -9,7 +9,9 @@
 
 
 ***
-<center>
-**Contributions from the community are encouraged.**  
-*Fork this repo and add the channels you find and send a PR.*
+<center>  
+  <i>Contributions from the community are encouraged.</i>
+  <b>Fork this repo and add the channels you find and send a PR.</b>
 </center>
+
+***
