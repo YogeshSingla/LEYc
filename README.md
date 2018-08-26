@@ -9,7 +9,7 @@
 |3. | [Art of the Problem](https://www.youtube.com/channel/UCotwjyJnb-4KW7bmsOoLfkg) | <ul><li> Deceptively named, the channel focuses on computer science and it's history. It also covers Information Theory in a insight revealing manner. <br><br><li>Videos range from 2 to 10 mins, averaging around 5 mins.|
 
 ***
-channels listed here do not rely heavily on advertisements and expect to see less sponsered content in them.
+channels listed here do not rely heavily on advertisements and expect to see very less sponsered content in them.
 
 ***
 <center>  
