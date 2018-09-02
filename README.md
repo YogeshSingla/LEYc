@@ -11,7 +11,7 @@
 
 
 ### How to contribute?
->>>>Fork this repo and add the channels you find and send a PR.
+>Fork this repo and add the channels you find and send a PR.
 
 ***
 ### Footnotes
