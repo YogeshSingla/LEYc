@@ -12,9 +12,6 @@ FILEPATH = PATH + FILENAME
 
 file_contents = """
 
-|S.No.|           Channel            |          Short Description            |
-|----|------------------------------|---------------------------------------|
-
 |3. | [Art of the Problem](https://www.youtube.com/channel/UCotwjyJnb-4KW7bmsOoLfkg) | <ul><li> Deceptively named, the channel focuses on computer science and it's history. It also covers Information Theory in a insight revealing manner. <br><br><li>Videos range from 2 to 10 mins, averaging around 5 mins.|
 |4. | [Welch Labs]() | <ul><li> Videos on machine learning, imaginery numbers and music. Takes an inquisitive viewpoint over plain theory regurgitation.</li><li> Short videos that leave you thinking at the end. Introductory series on machine learning titled <b>"Learning to See"</b> highly recommended. </li></ul> |
 
@@ -41,7 +38,9 @@ channels listed here do not rely heavily on advertisements and expect to see ver
 channels_data = [['3Blue1Brown','https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw','  Videos on intermediate level maths concepts like differentiation, curl, eigen values offering valuable insights.','Generally, longer videos of around 20-25 minutes from a very humble creator with really sweet voice.'],
 ['LeiosOS','https://www.youtube.com/channel/UCd0dc7kQA1FUpJ76o1EjLqQ)|',' 2-3 minutes videos broadly ranging from calculus to algorithms.','Appreciated for sheer interest in the subject and his passion visible in his videos.']]
 
-channel_content = """"""
+channel_content = """|S.No.|           Channel            |          Short Description            |
+|----|------------------------------|---------------------------------------|
+"""
 for i in range(2):
 	serial = i + 1
 	channel_name = channels_data[i][0]
