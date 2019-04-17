@@ -8,6 +8,7 @@
 |2. | [LeiosOS](https://www.youtube.com/channel/UCd0dc7kQA1FUpJ76o1EjLqQ)|<ul><li> 2-3 minutes videos broadly ranging from calculus to algorithms.<li> Appreciated for sheer interest in the subject and his passion visible in his videos.
 |3. | [Art of the Problem](https://www.youtube.com/channel/UCotwjyJnb-4KW7bmsOoLfkg) | <ul><li> Deceptively named, the channel focuses on computer science and it's history. It also covers Information Theory in a insight revealing manner. <br><br><li>Videos range from 2 to 10 mins, averaging around 5 mins.|
 |4. | [Welch Labs]() | <ul><li> Videos on machine learning, imaginery numbers and music. Takes an inquisitive viewpoint over plain theory regurgitation.</li><li> Short videos that leave you thinking at the end. Introductory series on machine learning titled <b>"Learning to See"</b> highly recommended. </li></ul> |
+|5. | [Siraj Raval](https://www.youtube.com/channel/UCWN3xxRkmTPmbKwht9FuE5A/featured) | <ul><li> Videos on machine learning, Deep Learning, NLP and Data Science. </li><li> Hands on Approach coupled with theory </li></ul> |
 
 
 ### How to contribute?
