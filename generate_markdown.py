@@ -1,8 +1,5 @@
 #!/usr/bin/python
-import cgi
-import io
-import csv
-import os
+import os #for file
 
 
 PATH='/home/kirito/TODO/LEYc/'
@@ -28,6 +25,8 @@ channels listed here do not rely heavily on advertisements and expect to see ver
 
 ***
 """
+
+
 
 channels_data = [['3Blue1Brown','https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw','  Videos on intermediate level maths concepts like differentiation, curl, eigen values offering valuable insights.','Generally, longer videos of around 20-25 minutes from a very humble creator with really sweet voice.'],
 ['LeiosOS','https://www.youtube.com/channel/UCd0dc7kQA1FUpJ76o1EjLqQ',' 2-3 minutes videos broadly ranging from calculus to algorithms.','Appreciated for sheer interest in the subject and his passion visible in his videos.'],
