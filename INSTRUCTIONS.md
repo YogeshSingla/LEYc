@@ -1,16 +1,13 @@
 # Instructions
 
 1. [For adding channels:](#instructions---channel-contributors)
-	1. [Add to README through python.](#setup-install-protobuf)
-	2. [Add to queue.]() 
-2. For open source enthusiasts
-3. For developers
+	1. [Add to README through python.](#setup---install-protobuf)
+	2. [Add to queue.](QUEUE.md#queue) 
+2. [For open source enthusiasts](#instructions---open-source-enthusiasts)
+3. [For developers](#instructions---developers)
 
 ## Instructions - Channel Contributors
 Intended for those who wish to add channels to this repo.
-
-1. Adding permanently. (Using `generate_markdown.py`)
-2. Adding in the queue. (Manually adding to `QUEUE.md`)
 
 ### Setup - Install protobuf
 1. You need to add protobuf library in your python distribution. The following steps will install protobuf module in python. To check if you have protobuf already, use:

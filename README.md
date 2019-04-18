@@ -11,7 +11,7 @@
 |5.| [Siraj Raval](https://www.youtube.com/channel/UCWN3xxRkmTPmbKwht9FuE5A/featured)|<ul> <li>Videos on machine learning, Deep Learning, NLP and Data Science.<br><br> <li>Hands on Approach coupled with theory|
 
 ### How to contribute?
-* SEE INSTRUCTIONS.md  
+* SEE [INSTRUCTIONS.md](INSTRUCTIONS.md#instructions)  
 * This `README.md` file is generated using python script: `generate_markdown.py`. Do not edit `README.md` manually. Changes will be overwritten on next execution of `generate_markdown.py`  
 ***
 ### Footnotes

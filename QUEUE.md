@@ -1,4 +1,4 @@
-# Queue to add
+# Queue
 Intended for those contributors who couldn't get protobuf functioning but still would like to add channels.
 
 Add your channels below. Copy this sample and make edits. Any contributor with working protobuf module may add this to main `README.md` file.
