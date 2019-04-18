@@ -18,12 +18,12 @@ file_header = """
 
 file_footer = """
 ### How to contribute?
->SEE INSTRUCTIONS.md
->THIS README file is generated using python script (generate_markdown.py).
->DO NOT EDIT README.md manually. Changes will be overwritten by generate_markdown.py
+* SEE INSTRUCTIONS.md  
+* THIS README file is generated using python script (generate_markdown.py).  
+* DO NOT EDIT README.md manually. Changes will be overwritten by generate_markdown.py  
 ***
 ### Footnotes
->channels listed here do not rely heavily on advertisements and expect to see very less sponsered content in them.
+>Channels listed here do not rely heavily on advertisements and expect to see very less sponsered content in them.
 
 ***
 """
