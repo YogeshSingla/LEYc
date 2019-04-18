@@ -3,8 +3,8 @@
 import channellist_pb2
 import sys
 
-# Iterates though all people in the ChannelList and prints info about them.
-def ListPeople(channel_list):
+# Iterates though all channels in the ChannelList and prints info about them.
+def ListChannel(channel_list):
   for channel in channel_list.channel:
     print("-"*40)
     print("", channel.c_name)
@@ -32,4 +32,4 @@ f = open(CHANNEL_LIST_FILE, "rb")
 channel_list.ParseFromString(f.read())
 f.close()
 
-ListPeople(channel_list)
+ListChannel(channel_list)

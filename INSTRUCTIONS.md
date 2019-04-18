@@ -2,7 +2,7 @@
 Intended for those who wish to add channels to this repo.
 
 ## Setup - Install protobuf
-1. You need to add protobuf library in your python distribution. The following steps will install protobuf module in python. To check if you have protobuf already use:
+1. You need to add protobuf library in your python distribution. The following steps will install protobuf module in python. To check if you have protobuf already, use:
 ```
 $ python
 >>> import google.protobuf 

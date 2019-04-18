@@ -9,13 +9,11 @@ FILEPATH = PATH + FILENAME
 
 
 file_contents = """"""
-
 file_header = """
 # List of Educational YouTube channels
 ### Mathematics and Computing Science
 ###### Inspiring and Insightful
 """
-
 file_footer = """
 ### How to contribute?
 * SEE INSTRUCTIONS.md  
@@ -27,9 +25,8 @@ file_footer = """
 ***
 """
 
-# Iterates though all people in the ChannelList and adds to a list.
+# Iterates though all channels in the ChannelList and adds to a list.
 def GenerateMarkdownTable(channel_list):
-  
   channel_content = """"""
   channels_data = []
   serial = 0
@@ -43,16 +40,12 @@ def GenerateMarkdownTable(channel_list):
     if channel.HasField('c_desc'):
       channel_desc1 = channel.c_desc.c_desc_1
       channel_desc2 = channel.c_desc.c_desc_2
-    
     entry = """|%s.| [%s](%s)|<ul> <li>%s<br><br> <li>%s|
 """%(serial,channel_name,channel_link,channel_desc1,channel_desc2)      
-  
     channel_content = channel_content + entry
-
   return channel_content
 
 def GenerateMarkdownFile(channel_table):
-  
   channel_table_header = """|S.No.|           Channel            |          Short Description            |
 |----|------------------------------|---------------------------------------|
 """
@@ -62,24 +55,24 @@ def GenerateMarkdownFile(channel_table):
     file.write(file_contents)
 
 # Main procedure:  Reads the entire channel list from a file and generate a markdown file.
-CHANNEL_LIST_FILE = "CHANNEL_LIST"
+if __name__ == "__main__":
+  CHANNEL_LIST_FILE = "CHANNEL_LIST"
+  if len(sys.argv) == 2:
+    CHANNEL_LIST_FILE = sys.argv[1]
 
-if len(sys.argv) != 2:
-  print("Using default channellist file:", CHANNEL_LIST_FILE)
-else:
-  CHANNEL_LIST_FILE = sys.argv[1]
+  print("Using channellist file:", CHANNEL_LIST_FILE)
 
-channel_list = channellist_pb2.ChannelList()
+  channel_list = channellist_pb2.ChannelList()
 
-# Read the existing channel list.
-f = open(CHANNEL_LIST_FILE, "rb")
-channel_list.ParseFromString(f.read())
-f.close()
+  # Read the existing channel list.
+  f = open(CHANNEL_LIST_FILE, "rb")
+  channel_list.ParseFromString(f.read())
+  f.close()
 
-# Get channel content in markdown table
-channel_table = GenerateMarkdownTable(channel_list)
+  # Get channel content in markdown table
+  channel_table = GenerateMarkdownTable(channel_list)
 
-# Generate final markdown file from markdown table
-GenerateMarkdownFile(channel_table)
+  # Generate final markdown file from markdown table
+  GenerateMarkdownFile(channel_table)
 
 
