@@ -15,7 +15,7 @@ Traceback (most recent call last):
 ModuleNotFoundError: No module named 'protobuf'
 ```
 
-2. Download python release of protobuf [here](https://github.com/protocolbuffers/protobuf/releases/tag/v3.7.1) : https://github.com/protocolbuffers/protobuf/releases/download/v3.7.1/protobuf-python-3.7.1.zip
+2. Download python release of protobuf ([Click here for all releases](https://github.com/protocolbuffers/protobuf/releases/tag/v3.7.1)) : https://github.com/protocolbuffers/protobuf/releases/download/v3.7.1/protobuf-python-3.7.1.zip
 
 3. To setup protobuf module in python we first need to setup the compiler since we are building from source. After extracting follow:
 ```
@@ -43,15 +43,10 @@ $ python setup.py install
 
 1. Run the add_channel script using python :
 ```
-to add to existing list:
+cd src
 python add_channel.py
-
-to specify your own binary data file:
-python add_channel.py <channel_list_file>
-
-// use the python2 or python3 as per the interpreter where you installed protobuf
-// channel_list_file is optional. If not specified. Default list will be used - CHANNEL_LIST
 ```
+Use the python interpreter in which protobuf module is installed.
 
 2. Follow the steps in the terminal to enter relevant details.
 
@@ -64,20 +59,19 @@ python add_channel.py <channel_list_file>
 python display_all_channel.py
 ```
 
-***
 # Instructions - Open source enthusiasts
 Intended for those who would like to finish the scripting items of this repo.
 
 1. Please check the TODO.md
 2. Implement any utility that you wish and send a PR.
-3. If any more items can be added change TODO.md or raise an issue.
-***
+3. If any more items can be added, modify `TODO.md` or **raise an issue**.
+
 
 # Instructions - Developers
 Intended for those who want to extend this to their own projects.
 
 ## Learning basics of protobuf (python):
-Link: https://developers.google.com/protocol-buffers/docs/pythontutorial
+Link: https://developers.google.com/protocol-buffers/docs/pythontutorial  
 Protobuf is Google's standard data exchange format that can be used for data storage in local disk or for transmission over the network.  
 As mentioned in Google's docs:
 > Protocol buffers are a flexible, efficient, automated mechanism for serializing structured data – think XML, but smaller, faster, and simpler
@@ -89,6 +83,15 @@ As mentioned in Google's docs:
 2. Generate the python class from proto file as :
 ```
 protoc -I=. --python_out=. ./channellist.proto
-// format: protoc -I=$SRC_DIR --python_out=$DST_DIR $SRC_DIR/addressbook.proto
+
+//format: protoc -I=$SRC_DIR --python_out=$DST_DIR $SRC_DIR/addressbook.proto
+```
+
+## Using add_channel.py
+
+To specify your own binary data file:
+```
+python add_channel.py <channel_list_file>
+
 ```
 
