@@ -16,7 +16,7 @@ file_header = """
 """
 file_footer = """
 ### How to contribute?
-* SEE [INSTRUCTIONS.md](INSTRUCTIONS.md#instructions)  
+* SEE [CONTRIBUTING.md](CONTRIBUTING.md#instructions)  
 * This `README.md` file is generated using python script: `generate_markdown.py`. Do not edit `README.md` manually. Changes will be overwritten on next execution of `generate_markdown.py`  
 ***
 ### Footnotes

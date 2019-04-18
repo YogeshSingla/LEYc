@@ -4,7 +4,7 @@
 ```
 .
 ├── FILES.md : This file
-├── INSTRUCTIONS.md : Steps for contributors to this repo.
+├── CONTRIBUTING.md : Steps for contributors to this repo.
 ├── QUEUE.md : List of channels to be added to readme by python script in case the contributor couldn't run python script.
 ├── README.md : Main list
 ├── src

@@ -28,7 +28,7 @@
 |22.| [Microsoft Research](https://www.youtube.com/channel/UCCb9_Kn8F_Opb3UCGm-lILQ)|<ul> <li>Advanced computer science concepts and areas of active research<br><br> <li>Full length presentations on active research works in computer science, generally by MSR scientists.|
 
 ### How to contribute?
-* SEE [INSTRUCTIONS.md](INSTRUCTIONS.md#instructions)  
+* SEE [CONTRIBUTING.md](CONTRIBUTING.md#instructions)  
 * This `README.md` file is generated using python script: `generate_markdown.py`. Do not edit `README.md` manually. Changes will be overwritten on next execution of `generate_markdown.py`  
 ***
 ### Footnotes
