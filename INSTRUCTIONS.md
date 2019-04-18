@@ -1,4 +1,4 @@
-# Instructions - Contributors
+# Instructions - Channel Contributors
 Intended for those who wish to add channels to this repo.
 
 ## Setup - Install protobuf
@@ -64,6 +64,13 @@ python add_channel.py <channel_list_file>
 python display_all_channel.py
 ```
 
+***
+# Instructions - Open source enthusiasts
+Intended for those who would like to finish the scripting items of this repo.
+
+1. Please check the TODO.md
+2. Implement any utility that you wish and send a PR.
+3. If any more items can be added change TODO.md or raise an issue.
 ***
 
 # Instructions - Developers

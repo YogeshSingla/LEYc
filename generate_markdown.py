@@ -1,9 +1,10 @@
-#!/usr/bin/python
-import os #for file
+#! /usr/bin/python
 
+import channellist_pb2 #protobuf storage of channels
+import sys #to get script arguments
 
-PATH='/home/kirito/TODO/LEYc/'
-FILENAME = 'readme.md'
+PATH='./'
+FILENAME = 'README.md'
 FILEPATH = PATH + FILENAME
 
 
@@ -17,45 +18,69 @@ file_header = """
 
 file_footer = """
 ### How to contribute?
->Fork this repo and add the channels you find and send a PR.
-
+>SEE INSTRUCTIONS.md
+>THIS README file is generated using python script (generate_markdown.py).
+>DO NOT EDIT README.md manually. Changes will be overwritten by generate_markdown.py
 ***
 ### Footnotes
-channels listed here do not rely heavily on advertisements and expect to see very less sponsered content in them.
+>channels listed here do not rely heavily on advertisements and expect to see very less sponsered content in them.
 
 ***
 """
 
+# Iterates though all people in the ChannelList and adds to a list.
+def GenerateMarkdownTable(channel_list):
+  
+  channel_content = """"""
+  channels_data = []
+  serial = 0
+  for channel in channel_list.channel:
+    serial = serial + 1
+    channel_name = channel.c_name
+    if channel.HasField('c_link'):
+      channel_link = channel.c_link
+    else:
+      channel_link = ''
+    if channel.HasField('c_desc'):
+      channel_desc1 = channel.c_desc.c_desc_1
+      channel_desc2 = channel.c_desc.c_desc_2
+    
+    entry = """|%s.| [%s](%s)|<ul> <li>%s<br><br> <li>%s|
+"""%(serial,channel_name,channel_link,channel_desc1,channel_desc2)      
+  
+    channel_content = channel_content + entry
 
+  return channel_content
 
-channels_data = [['3Blue1Brown','https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw','  Videos on intermediate level maths concepts like differentiation, curl, eigen values offering valuable insights.','Generally, longer videos of around 20-25 minutes from a very humble creator with really sweet voice.'],
-['LeiosOS','https://www.youtube.com/channel/UCd0dc7kQA1FUpJ76o1EjLqQ',' 2-3 minutes videos broadly ranging from calculus to algorithms.','Appreciated for sheer interest in the subject and his passion visible in his videos.'],
-['Art of the Problem','https://www.youtube.com/channel/UCotwjyJnb-4KW7bmsOoLfkg','Deceptively named, the channel focuses on computer science and it\'s history. It also covers Information Theory in a insight revealing manner. ','Videos range from 2 to 10 mins, averaging around 5 mins.'],
-['Welch Labs','https://www.youtube.com/user/Taylorns34','Videos on machine learning, imaginery numbers and music. Takes an inquisitive viewpoint over plain theory regurgitation.','Short videos that leave you thinking at the end. Introductory series on machine learning titled <b>"Learning to See"</b> highly recommended. ']]
-
-
-channel_content = """|S.No.|           Channel            |          Short Description            |
+def GenerateMarkdownFile(channel_table):
+  
+  channel_table_header = """|S.No.|           Channel            |          Short Description            |
 |----|------------------------------|---------------------------------------|
 """
+  channel_table = channel_table_header + channel_table
+  file_contents = file_header + channel_table + file_footer
+  with open(FILEPATH, 'wt') as file:
+    file.write(file_contents)
 
-for i in range(4):
-	serial = i + 1
-	channel_name = channels_data[i][0]
-	channel_link = channels_data[i][1]
-	channel_desc1 = channels_data[i][2]
-	channel_desc2 = channels_data[i][3]
-	entry = """|%s.| [%s](%s)|<ul> <li>%s<br><br> <li>%s|
-"""%(serial,channel_name,channel_link,channel_desc1,channel_desc2)
+# Main procedure:  Reads the entire channel list from a file and generate a markdown file.
+CHANNEL_LIST_FILE = "CHANNEL_LIST"
 
-	channel_content = channel_content + entry
-
-file_contents = file_header + channel_content + file_footer
-
-if (os.access(PATH, os.R_OK)):
-	with open(FILEPATH, 'wt') as file:
-		file.write(file_contents)
+if len(sys.argv) != 2:
+  print("Using default channellist file:", CHANNEL_LIST_FILE)
 else:
-	print("Error: File or folder access not available")
+  CHANNEL_LIST_FILE = sys.argv[1]
 
+channel_list = channellist_pb2.ChannelList()
+
+# Read the existing channel list.
+f = open(CHANNEL_LIST_FILE, "rb")
+channel_list.ParseFromString(f.read())
+f.close()
+
+# Get channel content in markdown table
+channel_table = GenerateMarkdownTable(channel_list)
+
+# Generate final markdown file from markdown table
+GenerateMarkdownFile(channel_table)
 
 

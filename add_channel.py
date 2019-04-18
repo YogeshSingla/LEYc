@@ -10,16 +10,14 @@ def AddChannel(channel):
   if c_link != "":
     channel.c_link = c_link
 
-  c_desc = channel.c_desc.add()
-
   desc1 = input("Enter description (#1 of 2)(key areas of channel, what is it about): ")
   if desc1 != "":
-    c_desc.c_desc_1 = desc1
+    channel.c_desc.c_desc_1 = desc1
     
 
   desc2 = input("Enter description (#2 of 2)(length and type of videos or any other USP): ")
   if desc2 != "":
-    c_desc.c_desc_2 = desc2
+    channel.c_desc.c_desc_2 = desc2
 
 # Main procedure:  Reads the entire channle list from a file,
 #   adds one channel based on user input, then writes it back out to the same
