@@ -11,7 +11,7 @@ FILEPATH = PATH + FILENAME
 file_contents = """"""
 file_header = """
 # List of Educational YouTube channels
-### Mathematics and Computing Science
+List of good YouTube channels that are inclined towards education and community building over advertisements and endorsements.
 ###### Inspiring and Insightful
 """
 file_footer = """
