@@ -20,7 +20,8 @@ file_footer = """
 * This `README.md` file is generated using python script: `generate_markdown.py`. Do not edit `README.md` manually. Changes will be overwritten on next execution of `generate_markdown.py`  
 ***
 ### Footnotes
->Channels listed here do not rely heavily on advertisements and expect to see very less sponsered content in them.
+>Channels listed here do not rely heavily on advertisements and expect to see very less sponsered content in them.  
+>Youtube Channels are part of pop-science (popular science). These may help form insights, look at concepts from a different perspective but in no way can they replace the hard core real information disseminated through research papers, textbooks and obtained through actual implementation yourself. They are complimentary not sufficient for any practical requirement.
 
 ***
 """
